@@ -142,8 +142,8 @@ textarea {
 
 .fixi .menumobile-line {
 
-    background-color:#272727;
- 
+    background-color: #272727;
+
 }
 
 /*
@@ -605,7 +605,6 @@ textarea {
     padding-left: 30px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
     text-transform: uppercase;
     color: #b9b9b9;
     position: relative;
@@ -1141,7 +1140,7 @@ svg {
 
 @media (max-width: 999px) {
     .filter-button {
-        text-align: right;
+        text-align: center;
         position: relative;
         top: 0;
     }
@@ -1181,23 +1180,39 @@ svg {
 
     .image-poto-r-one {
         width: 250px;
-        height: 400px;
+        height: 300px;
         position: absolute;
-        left: 200px;
+        left: 100px;
         top: 250px;
     }
 
     .image-poto-r-one>img {
-        width:250px;
-        height: 400px;
+        width: 250px;
+        height: 300px;
+        object-fit: contain;
     }
 
     .image-poto-r-two {
-        width: 320px;
-        height: 600px;
+        width: 200px;
+        height: 350px;
         position: relative;
         margin: unset;
     }
+
+    .btfilter {
+        padding-left: 10px;
+    }
+
+    .actives:after {
+        margin-left: 5px;
+    }
+
+    .image-poto-r-two img {
+        width: 200px;
+        height: 350px;
+        object-fit: contain;
+    }
+
 
     .about-merightwrap {
         padding-top: 150px;
@@ -1219,11 +1234,8 @@ svg {
     }
 
     #porto-wrap {
-
         padding-top: 30px;
     }
-
-
 
     .owl-carousel .owl-dots.disabled,
     .owl-carousel .owl-nav.disabled {
@@ -1232,22 +1244,19 @@ svg {
 
     .title-wrap {
         padding-bottom: 0;
+        text-align: center;
     }
 
     .title-wrap h2 {
         font-size: 30px;
-
     }
 
     .testi-wrap {
-
         padding-left: 20px;
-
     }
 
     .testi-wrap h2 {
         font-size: 30px;
-
     }
 
 
@@ -1364,7 +1373,25 @@ svg {
         width: 50px;
         top: -10px;
     }
-
+    .wraptext {
+  width: 100%;
+  margin: 0 0 1em 0;
+  overflow: hidden;
+} 
+.overflows {
+  position: relative;
+  height: 4.6em; /* exactly three lines */
+}
+.overflows:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1.2em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
 }
 
 @media only screen and (max-width: 690px) {}
@@ -1372,15 +1399,15 @@ svg {
 @media only screen and (max-width: 580px) {
 
     .poto-userwarp {
-        width: 250px;
+        width: 200px;
         height: 200px;
-        padding-right: 20px;
+        padding-right: 30px;
         padding-left: 0;
         margin-bottom: 0;
     }
 
     .poto-userwarp>img {
-        height: 250px !important;
+        height: 200px !important;
     }
 
     #testimonial-wrap {
@@ -1392,8 +1419,8 @@ svg {
     .text-testiwrap {
         padding-left: 0;
         width: 250px;
-        padding-right: 20px;
-        padding-top: 80px;
+        padding-right: 80px;
+        padding-top: 30px;
     }
 
     .wrap-slidetesti .owl-theme .custom-nav {
@@ -1410,9 +1437,7 @@ svg {
         top: -10px;
     }
 
-    .text-testiwrap {
-        padding-right: 50px;
-    }
+ 
 
     .text-testiwrap p {
         font-size: 13px;
