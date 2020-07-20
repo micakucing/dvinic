@@ -268,13 +268,13 @@ const dvinicinit = (function() {
     //navbar mobile open
     ToggleMenu.click(function() {
         WarpMenuMobile.show(200);
-        WarpMenuMobile.animate({ right: "0px" }, 500);
+        WarpMenuMobile.animate({ right: "0px" }, 200);
         OverlayClose.fadeIn();
         BodyElement.addClass('fixed')
     });
     //navbar mobile overlay close
     OverlayClose.click(function() {
-        WarpMenuMobile.animate({ right: "-500px" }, 500);
+        WarpMenuMobile.animate({ right: "-500px" }, 200);
         OverlayClose.fadeOut();
         WarpMenuMobile.hide(500);
         BodyElement.removeClass('fixed')
