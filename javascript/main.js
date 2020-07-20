@@ -15,8 +15,12 @@ const dvinicinit = (function() {
     var Menulist = $(".listmenu");
     var MenuHeight = Menulist.outerHeight() + 3;
     var menuItems = Menulist.find("li > a");
+    var menuItemsmobile = Menulist.find("li > a");
+    var OverlayClose = $('.menu-mobile-overlay');
     var Slide1 = $('#testimonial-wrap');
     var Header = $('#main-headderpage');
+    var WarpMenuMobile = $('.mobilenav-wrap');
+    var ToggleMenu = $('.menumobile-icon');
 
 
     let isMobile = {
@@ -82,6 +86,7 @@ const dvinicinit = (function() {
         }
     }
 
+
     /* carousel review  Init
                 ============================ */
     const reviewclient = function(event) {
@@ -117,7 +122,7 @@ const dvinicinit = (function() {
 
     $('.btfilter').on('click', function() {
         var t = $(this).attr('data-fil')
-            $(this).addClass('actives').siblings().removeClass('actives');
+        $(this).addClass('actives').siblings().removeClass('actives');
 
         $(".item").each(function(index) {
             $(".item").hide();
@@ -129,35 +134,58 @@ const dvinicinit = (function() {
         });
     })
 
-   // fixed header init ----------------------
+    // fixed header init ----------------------
     const fixi = function() {
         if (Window.scrollTop() > 500) {
             Header.addClass('fixi');
         } else {
             Header.removeClass('fixi');
         }
-       
+
     }
+    //navbar mobile open
+    ToggleMenu.click(function() {
+        WarpMenuMobile.show(200);
+        WarpMenuMobile.animate({ right: "0px" }, 500);
+        OverlayClose.fadeIn();
+        BodyElement.addClass('fixed')
+    });
+    //navbar mobile overlay close
+    OverlayClose.click(function() {
+        WarpMenuMobile.animate({ right: "-500px" }, 500);
+        OverlayClose.fadeOut();
+        WarpMenuMobile.hide(500);
+        BodyElement.removeClass('fixed')
+    });
 
     //link menu navigator scroll
-        menuItems.on("click", function(e) {
-            var anchor = $(this);
-            BodyElement.stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top - 5
-            }, 1000, "easeInOutExpo");
+    menuItems.on("click", function(e) {
+        var anchor = $(this);
+        BodyElement.stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top - 50
+        }, 1000, "easeInOutExpo");
 
-            if (BodyElement.hasClass('screen-m')) {
-              
-               
-            }
-            e.preventDefault();
-        });
+        e.preventDefault();
+    });
+
+
+    //link menu navigator scroll
+    menuItemsmobile.on("click", function(e) {
+        var anchor = $(this);
+        BodyElement.stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top - 0
+        }, 1000, "easeInOutExpo");
+
+        WarpMenuMobile.animate({ right: "-500px" }, 500);
+        OverlayClose.fadeOut();
+        WarpMenuMobile.hide(500);
+        BodyElement.removeClass('fixed')
+        e.preventDefault();
+    });
 
     //on document ready 
     const DocumentReady = function(event) {
-
         reviewclient()
-
     }
 
 
