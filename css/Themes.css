@@ -84,6 +84,62 @@ textarea {
 }
 
 
+.line-bg>div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(175, 173, 173, .2);
+}
+
+.line-bg>div:nth-child(1) {
+    left: 20%;
+}
+
+.line-bg>div:nth-child(2) {
+    left: 40%;
+}
+
+.line-bg>div:nth-child(3) {
+    left: 60%;
+}
+
+.line-bg>div:nth-child(4) {
+    left: 80%;
+}
+
+.wraploadder {
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    background: white;
+    z-index: 9999;
+}
+.loadder {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.loadder div {
+    position: absolute;
+    border: 4px solid #969696;
+    opacity: 1;
+    border-radius: 50%;
+    animation: effect-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loadder div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+
+
 /*
 * ----------------------------------------------------------------------------------------
 * 02.KEYFRAME ANIMATION
@@ -97,6 +153,24 @@ textarea {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes effect-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
     }
 }
 
@@ -634,7 +708,7 @@ textarea {
     column-count: 3;
 }
 
-.gallery-link{
+.gallery-link {
     transition: all .3s;
 
 }
@@ -642,6 +716,7 @@ textarea {
 .gallery-link:hover {
     filter: brightness(0.5);
 }
+
 .poto-wrap>.item {
     margin-bottom: 30px;
     display: inline-block;
@@ -1038,6 +1113,7 @@ textarea {
 .form-contactwrap {
     margin-bottom: 30px;
 }
+
 .contacttitle-wrap {
     width: 60%;
     padding-top: 100px;
@@ -1077,20 +1153,23 @@ textarea {
 }
 
 .error {
-      color: red;
+    color: red;
     margin-top: 5px;
     font-weight: normal;
     font-size: 12px;
 }
+
 .iconscontact {
     position: absolute;
     right: 10px;
     top: 0;
     font-size: 15px;
 }
+
 .input.error {
-  margin-top: 10px;
+    margin-top: 10px;
 }
+
 .input {
     margin-top: 20px;
 }
@@ -1372,7 +1451,7 @@ svg {
     }
 
 
-    
+
     #porto-wrap {
         padding-top: 30px;
     }

@@ -25,7 +25,7 @@ const dvinicinit = (function() {
     var WarpMenuMobile = $('.mobilenav-wrap');
     var ToggleMenu = $('.menumobile-icon');
     var Form = $('#formcontact');
-
+     var preload = $(".wraploadder");
 
     let isMobile = {
         Android: function() {
@@ -319,11 +319,15 @@ const dvinicinit = (function() {
         fixi()
     }
 
+   //loadder indicator init ----------------------
+    const loadd = function() {
+        preload.fadeOut(600);
+    }
     //binds event ----------------------------
     const bindEvents = function() {
         Document.on('ready', DocumentReady);
         Window.on('scroll', Scrollwindow);
-
+        Window.on('load', loadd)
 
     };
 
