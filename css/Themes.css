@@ -1291,6 +1291,12 @@ svg {
 
     .testi-wrap {
         padding-left: 20px;
+        width: 90%;
+
+    }
+
+    .testi-wrap p {
+        font-size: 15px;
     }
 
     .testi-wrap h2 {
@@ -1316,6 +1322,10 @@ svg {
         padding-left: 50px;
     }
 
+    .newstitle-wrap p {
+        font-size: 15px;
+
+    }
 
     .poto-userwarp {
         width: 280px;
@@ -1570,10 +1580,19 @@ svg {
     }
 
     .btn-pg:before {
-
         width: 30%;
-
         left: 10px;
+    }
+
+    .contacttitle-wrap h2,
+    .newstitle-wrap h2,
+    .about-meleftwrap h2 {
+
+        font-size: 30px;
+    }
+
+    .listlinkfoot li {
+        margin-bottom: 10px;
     }
 }
 
