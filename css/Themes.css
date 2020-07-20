@@ -591,6 +591,7 @@ textarea {
 
 .textgap-wrap a:hover {
     text-decoration: none;
+    color: #272727;
 }
 
 
@@ -633,6 +634,14 @@ textarea {
     column-count: 3;
 }
 
+.gallery-link{
+    transition: all .3s;
+
+}
+
+.gallery-link:hover {
+    filter: brightness(0.5);
+}
 .poto-wrap>.item {
     margin-bottom: 30px;
     display: inline-block;
@@ -1362,6 +1371,8 @@ svg {
         left: 0;
     }
 
+
+    
     #porto-wrap {
         padding-top: 30px;
     }

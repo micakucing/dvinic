@@ -19,9 +19,12 @@ const dvinicinit = (function() {
     var OverlayClose = $('.menu-mobile-overlay');
     var Slide1 = $('#testimonial-wrap');
     var Header = $('#main-headderpage');
+    var popupImage = $(".popup-image");
+    var imagezoom = $('.img-popup-btn');
+    var videoPopup = $(".video-popup");
     var WarpMenuMobile = $('.mobilenav-wrap');
     var ToggleMenu = $('.menumobile-icon');
-      var Form = $('#formcontact');
+    var Form = $('#formcontact');
 
 
     let isMobile = {
@@ -119,6 +122,66 @@ const dvinicinit = (function() {
         });
     }
 
+
+ // zoom magnificpopup init ------------------------
+    const magnific = function() {
+        imagezoom.magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+        if (popupImage.length > 0) {
+            popupImage.magnificPopup({
+                type: 'image',
+                fixedContentPos: true,
+                gallery: { enabled: true },
+                removalDelay: 300,
+                mainClass: 'mfp-fade'
+            });
+        }
+        //Video Popup init
+        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: true
+        });
+        //Video Popup
+        if (videoPopup.length > 0) {
+            videoPopup.magnificPopup({
+                type: "iframe",
+                removalDelay: 300,
+                mainClass: "mfp-fade",
+                overflowY: "hidden",
+                iframe: {
+                    markup: '<div class="mfp-iframe-scaler">' +
+                        '<div class="mfp-close"></div>' +
+                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                        '</div>',
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/',
+                            id: 'v=',
+                            src: '//www.youtube.com/embed/%id%?autoplay=1'
+                        },
+                        vimeo: {
+                            index: 'vimeo.com/',
+                            id: '/',
+                            src: '//player.vimeo.com/video/%id%?autoplay=1'
+                        },
+                        gmaps: {
+                            index: '//maps.google.',
+                            src: '%id%&output=embed'
+                        }
+                    },
+                    srcAction: 'iframe_src'
+                }
+            });
+        }
+    }
 
     //init contact form  -------
     const subform = function() {
@@ -223,7 +286,6 @@ const dvinicinit = (function() {
         BodyElement.stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top - 50
         }, 1000, "easeInOutExpo");
-
         e.preventDefault();
     });
 
@@ -246,6 +308,7 @@ const dvinicinit = (function() {
     const DocumentReady = function(event) {
         reviewclient()
         subform()
+        magnific()
     }
 
 
