@@ -643,7 +643,7 @@ textarea {
 
 .btfilter:hover {
     padding-bottom: 20px;
-    padding-left: 30px;
+    padding-left: 10px;
 
 }
 
@@ -1560,6 +1560,13 @@ svg {
         width: 200px;
         height: 350px;
         object-fit: contain;
+    }
+
+    .btn-pg:before {
+
+        width: 30%;
+
+        left: 10px;
     }
 }
 
