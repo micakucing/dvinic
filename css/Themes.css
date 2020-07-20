@@ -1471,18 +1471,21 @@ svg {
 
 }
 
-@media only screen and (max-width: 690px) {
-
-
-
-
-
-
-
-
-}
+@media only screen and (max-width: 690px) {}
 
 @media only screen and (max-width: 580px) {
+
+    #detail-wraphero {
+        padding-top: 230px;
+    }
+
+    .wrap-infohero h2 {
+        font-size: 30px;
+    }
+
+    .wrap-infohero p {
+        font-size: 15px;
+    }
 
     .poto-userwarp {
         width: 200px;
@@ -1560,6 +1563,4 @@ svg {
     }
 }
 
-@media (max-width: 480px) {
-    
-}
+@media (max-width: 480px) {}
