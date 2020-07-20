@@ -21,6 +21,7 @@ const dvinicinit = (function() {
     var Header = $('#main-headderpage');
     var WarpMenuMobile = $('.mobilenav-wrap');
     var ToggleMenu = $('.menumobile-icon');
+      var Form = $('#formcontact');
 
 
     let isMobile = {
@@ -119,6 +120,64 @@ const dvinicinit = (function() {
     }
 
 
+    //init contact form  -------
+    const subform = function() {
+        Form.validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                name: {
+                    required: true,
+                    minlength: 5
+                },
+                message: {
+                    required: true
+                }
+            },
+            messages: {
+                email: {
+                    required: 'Check your email input'
+                },
+                name: {
+                    required: 'Please check your first name input'
+                },
+                message: {
+                    required: 'Please write something for us'
+                }
+            },
+            submitHandler: function(form) {
+                $.ajax({
+                    type: "POST",
+                    url: "https://mailpostexample.herokuapp.com/",
+                    data: $(form).serialize(),
+                    beforeSend: function() {
+                        $('input, textarea').attr('readonly', "readonly");
+                        formload.show()
+                    },
+                    success: function(msg) {
+                        if (msg == 'OK') {
+                            $('.loader').hide()
+                            Modalpopup.modal('show');
+                            Modalbody.html('<p>Thanks, Your message success sent </p>')
+                            Form.trigger("reset");
+                            $('input, textarea').attr('readonly', "false");
+                        } else {
+                            formload.hide()
+                            Modalpopup.modal('show');
+                            Modalbody.html('<p>' + msg + '</p>')
+                            $('input, textarea').attr('readonly', "false");
+                            Form.trigger("reset");
+                        }
+                    }
+                });
+                return false;
+            }
+        });
+    }
+
+
 
     $('.btfilter').on('click', function() {
         var t = $(this).attr('data-fil')
@@ -186,6 +245,7 @@ const dvinicinit = (function() {
     //on document ready 
     const DocumentReady = function(event) {
         reviewclient()
+        subform()
     }
 
 

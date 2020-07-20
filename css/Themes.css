@@ -1026,6 +1026,9 @@ textarea {
     text-align: right;
 }
 
+.form-contactwrap {
+    margin-bottom: 30px;
+}
 .contacttitle-wrap {
     width: 60%;
     padding-top: 100px;
@@ -1057,19 +1060,28 @@ textarea {
     line-height: 1.5;
 }
 
+
 .contacttitle-info {
     padding-right: 50px;
     font-size: 15px;
     position: relative;
 }
 
+.error {
+      color: red;
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 12px;
+}
 .iconscontact {
     position: absolute;
     right: 10px;
     top: 0;
     font-size: 15px;
 }
-
+.input.error {
+  margin-top: 10px;
+}
 .input {
     margin-top: 20px;
 }
