@@ -1504,6 +1504,13 @@ svg {
         font-size: 15px;
     }
 
+    .about-meleftwrap p {
+        padding-top: 30px;
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
     .poto-userwarp {
         width: 200px;
         height: 200px;
