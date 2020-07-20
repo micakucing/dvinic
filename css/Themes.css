@@ -58,6 +58,7 @@ textarea {
 .fixed {
     overflow: hidden;
 }
+
 .mouse {
     height: 100vh;
     position: absolute;
@@ -177,7 +178,7 @@ textarea {
 
 
 .mobilenav-wrap {
-        height: 100%;
+    height: 100%;
     overflow: auto;
     background: #fff;
     position: fixed;
@@ -188,17 +189,20 @@ textarea {
     width: 230px;
     z-index: 9;
 }
+
 .main-mobilenav {
     text-align: right;
     padding-top: 50px;
 }
+
 .main-mobilenav .listmenu li {
     list-style: none;
     margin-bottom: 30px;
-    font-size: 20px; 
+    font-size: 20px;
     position: relative;
 }
-.main-mobilenav  ul li a {
+
+.main-mobilenav ul li a {
     color: rgba(37, 36, 36, 0.88);
     text-decoration: none;
     text-transform: uppercase;
@@ -208,7 +212,7 @@ textarea {
     transition: all .3s;
 }
 
-.main-mobilenav  ul li a::after {
+.main-mobilenav ul li a::after {
     content: '';
     display: block;
     width: 0;
@@ -219,10 +223,11 @@ textarea {
     bottom: 10px;
     left: -80px;
 }
-.main-mobilenav  ul li.active a::after {
- 
+
+.main-mobilenav ul li.active a::after {
+
     width: 70%;
-   
+
 }
 
 
@@ -234,6 +239,7 @@ textarea {
     background: rgba(37, 36, 36, 0.88);
     top: 0;
 }
+
 /*
 * ----------------------------------------------------------------------------------------
 * 04. MAIN NAVIGATION CSS
@@ -653,6 +659,10 @@ textarea {
     margin-top: 30px;
 }
 
+.btn-pg:hover {
+    text-decoration: none;
+    color: #fff;
+}
 
 .btn-pg:before {
     content: '';
@@ -663,6 +673,8 @@ textarea {
     left: 0;
     bottom: 30px;
 }
+
+
 
 
 
@@ -678,6 +690,11 @@ textarea {
     color: #fff;
     letter-spacing: 1px;
     margin-top: 50px;
+}
+
+.btn-pg-news:hover {
+    text-decoration: none;
+    color: #fff;
 }
 
 .filter-button {
@@ -1206,6 +1223,10 @@ svg {
     text-align: center;
     font-size: 11px;
     letter-spacing: 1px;
+}
+
+.up a {
+    color: #fff;
 }
 
 /* ---------------------------------------------- /*
