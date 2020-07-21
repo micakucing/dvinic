@@ -1062,7 +1062,7 @@ textarea {
     content: '';
     width: 100%;
     height: 2px;
-    background: red;
+    background: #272727;
     left: 0;
     bottom: 0;
     position: absolute;
