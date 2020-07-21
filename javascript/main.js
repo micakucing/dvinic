@@ -304,6 +304,7 @@ const dvinicinit = (function() {
         reviewclient()
         subform()
         magnific()
+        AOS.init();
     }
 
     //on window scroll 

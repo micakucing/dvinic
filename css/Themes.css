@@ -8,9 +8,19 @@ Version       : 1.0
 * ----------------------------------------------------------------------------------------
 * 01.BASE CSS
 * 02.KEYFRAME ANIMATION
-*/
-
-
+* 03.LOADDER
+* 04.MAIN HEADDER PAGE CSS
+* 05.MAIN NAVIGATION CSS
+* 06.MOBILE NAVIGATION
+* 07.MAIN HERO SECTION
+* 08.MAIN ABOUT SECTION
+* 09.GAP SECTION
+* 10.PROJECT SECTION
+* 11.TESTIMONIAL SECTION
+* 12.NEWS SECTION
+* 13.CONTACTUS SECTION
+* 14.FOOTER SECTION
+* 15.MEDIA QUERY PAGE
 /*
 * ----------------------------------------------------------------------------------------
 * 01.BASE CSS
@@ -83,6 +93,50 @@ textarea {
     width: 6rem;
 }
 
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.KEYFRAME ANIMATION
+* ----------------------------------------------------------------------------------------
+*/
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes effect-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. LOADDER
+* ----------------------------------------------------------------------------------------
+*/
+
+
 .line-bg>div {
     position: absolute;
     top: 0;
@@ -141,44 +195,10 @@ textarea {
 
 /*
 * ----------------------------------------------------------------------------------------
-* 02.KEYFRAME ANIMATION
+* 04. MAIN HEADDER PAGE CSS
 * ----------------------------------------------------------------------------------------
 */
 
-@keyframes bounce {
-    50% {
-        transform: translateY(-50%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes effect-ripple {
-    0% {
-        top: 36px;
-        left: 36px;
-        width: 0;
-        height: 0;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        left: 0px;
-        width: 72px;
-        height: 72px;
-        opacity: 0;
-    }
-}
-
-
-/*
-* ----------------------------------------------------------------------------------------
-* 03. MAIN HEADDER PAGE CSS
-* ----------------------------------------------------------------------------------------
-*/
 
 #main-headderpage {
     padding-top: 20px;
@@ -210,114 +230,14 @@ textarea {
     filter: invert(1);
 }
 
-/* mobile menu toggle */
-.menumobile-icon {
-    position: absolute;
-    width: 30px;
-    height: 20px;
-    display: none;
-    top: -40px;
-    right: 30px;
-}
 
-.menumobile-line {
-    position: absolute;
-    right: 0;
-    background-color: #fff;
-    height: 2px;
-    width: 100%;
-    pointer-events: none;
-    transition: .3s cubic-bezier(.85, 0, .15, 1);
-    -webkit-transition: .3s cubic-bezier(.85, 0, .15, 1);
-    -moz-transition: .3s cubic-bezier(.85, 0, .15, 1);
-    -ms-transition: .3s cubic-bezier(.85, 0, .15, 1);
-    -o-transition: .3s cubic-bezier(.85, 0, .15, 1);
-}
-
-.menumobile-line-1 {
-    top: 3px;
-}
-
-.menumobile-line-2 {
-    top: 7px;
-    bottom: 0;
-    margin: auto;
-}
-
-.fixi .menumobile-line {
-    background-color: #272727;
-
-}
-
-
-.mobilenav-wrap {
-    height: 100%;
-    overflow: auto;
-    background: #fff;
-    position: fixed;
-    top: 0;
-    padding: 30px;
-    right: -1000px;
-    display: none;
-    width: 230px;
-    z-index: 9;
-}
-
-.main-mobilenav {
-    text-align: right;
-    padding-top: 50px;
-}
-
-.main-mobilenav .listmenu li {
-    list-style: none;
-    margin-bottom: 30px;
-    font-size: 20px;
-    position: relative;
-}
-
-.main-mobilenav ul li a {
-    color: rgba(37, 36, 36, 0.88);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
-    font-weight: bold;
-    transition: all .3s;
-}
-
-.main-mobilenav ul li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: rgba(37, 36, 36, 1);
-    transition: width .3s;
-    position: relative;
-    bottom: 10px;
-    left: -80px;
-}
-
-.main-mobilenav ul li.active a::after {
-
-    width: 70%;
-
-}
-
-
-.menu-mobile-overlay {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: rgba(37, 36, 36, 0.88);
-    top: 0;
-}
 
 /*
 * ----------------------------------------------------------------------------------------
-* 04. MAIN NAVIGATION CSS
+* 05. MAIN NAVIGATION CSS
 * ----------------------------------------------------------------------------------------
 */
+
 
 .main-wrapnavigation {
     text-align: right;
@@ -399,16 +319,120 @@ textarea {
 
 /*
 * ----------------------------------------------------------------------------------------
-* 05. MAIN HERO SECTION
+* 06.MOBILE NAVIGATION
 * ----------------------------------------------------------------------------------------
 */
+
+.menumobile-icon {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    display: none;
+    top: -40px;
+    right: 30px;
+}
+
+.menumobile-line {
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    pointer-events: none;
+    transition: .3s cubic-bezier(.85, 0, .15, 1);
+    -webkit-transition: .3s cubic-bezier(.85, 0, .15, 1);
+    -moz-transition: .3s cubic-bezier(.85, 0, .15, 1);
+    -ms-transition: .3s cubic-bezier(.85, 0, .15, 1);
+    -o-transition: .3s cubic-bezier(.85, 0, .15, 1);
+}
+
+.menumobile-line-1 {
+    top: 3px;
+}
+
+.menumobile-line-2 {
+    top: 7px;
+    bottom: 0;
+    margin: auto;
+}
+
+.fixi .menumobile-line {
+    background-color: #272727;
+}
+
+.mobilenav-wrap {
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    padding: 30px;
+    right: -1000px;
+    display: none;
+    width: 230px;
+    z-index: 9;
+}
+
+.main-mobilenav {
+    text-align: right;
+    padding-top: 50px;
+}
+
+.main-mobilenav .listmenu li {
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+    position: relative;
+}
+
+.main-mobilenav ul li a {
+    color: rgba(37, 36, 36, 0.88);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.main-mobilenav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgba(37, 36, 36, 1);
+    transition: width .3s;
+    position: relative;
+    bottom: 10px;
+    left: -80px;
+}
+
+.main-mobilenav ul li.active a::after {
+    width: 70%;
+}
+
+.menu-mobile-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(37, 36, 36, 0.88);
+    top: 0;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.MAIN HERO SECTION
+* ----------------------------------------------------------------------------------------
+*/
+
 
 #main-herowrap {
     height: 700px;
     overflow: hidden;
     position: relative;
 }
-
 
 #main-hero {
     position: absolute;
@@ -424,9 +448,6 @@ textarea {
     height: 700px;
     object-fit: cover;
 }
-
-
-
 
 #detail-wraphero {
     padding-top: 20%;
@@ -450,9 +471,6 @@ textarea {
     color: #fff;
     letter-spacing: 1px;
 }
-
-
-
 
 .wrap-sosmed {
     position: relative;
@@ -482,15 +500,11 @@ textarea {
 }
 
 
-
-
 /*
 * ----------------------------------------------------------------------------------------
-* 06. MAIN ABOUT SECTION
+* 08.MAIN ABOUT SECTION
 * ----------------------------------------------------------------------------------------
 */
-
-
 
 #about-wrap {
     padding-top: 250px;
@@ -505,15 +519,12 @@ textarea {
 .image-poto-l {
     width: 400px;
     height: 450px;
-
 }
-
 
 .image-poto-l>img {
     width: 400px;
     height: 450px;
     object-fit: cover;
-
 }
 
 .about-meleftwrap h2 {
@@ -522,7 +533,6 @@ textarea {
     font-size: 40px;
     color: #272727;
     font-weight: 800;
-
 }
 
 .about-meleftwrap p {
@@ -542,7 +552,6 @@ textarea {
     padding-top: 20px;
 }
 
-
 .about-meleftwrap a::after {
     content: '';
     display: block;
@@ -552,9 +561,7 @@ textarea {
     transition: width .3s;
     position: relative;
     bottom: -10px;
-
 }
-
 
 .about-meleftwrap a:hover::after {
     width: 0%;
@@ -581,7 +588,6 @@ textarea {
     position: absolute;
 }
 
-
 .image-poto-r-two>img {
     width: 100%;
     height: 600px;
@@ -589,10 +595,9 @@ textarea {
 }
 
 
-
 /*
 * ----------------------------------------------------------------------------------------
-* 07. GAP SECTION
+* 09. GAP SECTION
 * ----------------------------------------------------------------------------------------
 */
 
@@ -664,10 +669,9 @@ textarea {
 }
 
 
-
 /*
 * ----------------------------------------------------------------------------------------
-* 08. PROJECT SECTION
+* 10. PROJECT SECTION
 * ----------------------------------------------------------------------------------------
 */
 
@@ -704,7 +708,6 @@ textarea {
 
 .gallery-link {
     transition: all .3s;
-
 }
 
 .gallery-link:hover {
@@ -747,7 +750,6 @@ textarea {
     color: #fff;
 }
  
-
 .all:before {
     content: '';
     width: 70%;
@@ -757,8 +759,6 @@ textarea {
     left: 0;
     bottom: 30px;
 }
-
-
 
 .filter-button {
     padding-left: 0;
@@ -804,6 +804,13 @@ textarea {
     background: #272727;
 }
 
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 11. TESTIMONIAL SECTION
+* ----------------------------------------------------------------------------------------
+*/
 
 
 .wrap-slidetesti {
@@ -890,8 +897,6 @@ textarea {
     margin-top: 0;
 }
 
-
-
 .testi-wrap {
     width: 70%;
     padding-top: 100px;
@@ -955,20 +960,17 @@ textarea {
 
 .poto-userwarp>img {
     width: 50%;
-
     height: 400px !important;
     object-fit: cover;
 }
 
 
 
-
-
-
-
-
-
-
+/*
+* ----------------------------------------------------------------------------------------
+* 12. NEWS SECTION
+* ----------------------------------------------------------------------------------------
+*/
 
 .btn-pg-news {
     display: inline-block;
@@ -1093,8 +1095,12 @@ textarea {
 }
 
 
+/*
+* ----------------------------------------------------------------------------------------
+* 13.CONTACTUS SECTION
+* ----------------------------------------------------------------------------------------
+*/
 
-/* CONTACT US WRAP */
 
 #contact-us {
     padding-bottom: 100px;
@@ -1138,7 +1144,6 @@ textarea {
     font-size: 30px;
     line-height: 1.5;
 }
-
 
 .contacttitle-info {
     padding-right: 50px;
@@ -1186,12 +1191,10 @@ textarea.input {
 }
 
 .image-contactwrap {
-
     width: 100%;
     height: 600px;
     position: relative;
 }
-
 
 .image-contactwrap>img {
     width: 100%;
@@ -1223,7 +1226,14 @@ iframe {
     top: -100px;
 }
 
-/* FOOTER PAGE WRAP */
+
+/*
+* ----------------------------------------------------------------------------------------
+* 14.FOOTER SECTION
+* ----------------------------------------------------------------------------------------
+*/
+
+
 svg {
     position: absolute;
     top: 0;
@@ -1324,7 +1334,7 @@ svg {
 
 
 /* ---------------------------------------------- /*
-* 12.MEDIA QUERY PAGE
+* 15.MEDIA QUERY PAGE
 /* ---------------------------------------------- /*
 */
 
