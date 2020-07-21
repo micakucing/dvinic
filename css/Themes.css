@@ -38,7 +38,7 @@ html,
 body {
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
-    color: #827673;
+    color: #757575;
     background: #FFFFFF;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -538,7 +538,6 @@ textarea {
 .about-meleftwrap p {
     padding-top: 50px;
     font-size: 18px;
-    color: #929292;
     line-height: 1.5;
 }
 
@@ -781,7 +780,6 @@ textarea {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    color: #b9b9b9;
     position: relative;
     display: inline-block;
     border: 1px solid transparent;
@@ -1082,7 +1080,6 @@ textarea {
     margin-bottom: 30px;
     line-height: 23px;
     margin-top: 20px;
-    color: #272727;
 }
 
 .news-content h3 {
@@ -1318,7 +1315,7 @@ svg {
 }
 
 .listlinkfoot li a {
-    color: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, 0.49);
     font-family: 'Poppins', sans-serif;
 }
 
