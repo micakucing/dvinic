@@ -25,7 +25,7 @@ const dvinicinit = (function() {
     var WarpMenuMobile = $('.mobilenav-wrap');
     var ToggleMenu = $('.menumobile-icon');
     var Form = $('#formcontact');
-     var preload = $(".wraploadder");
+    var preload = $(".wraploadder");
 
     let isMobile = {
         Android: function() {
@@ -60,10 +60,6 @@ const dvinicinit = (function() {
         });
 
     }
-
-
-
-
 
     // scroll spy init ------------------------
     const ScrollSpy = function(event) {
@@ -245,7 +241,6 @@ const dvinicinit = (function() {
     $('.btfilter').on('click', function() {
         var t = $(this).attr('data-fil')
         $(this).addClass('actives').siblings().removeClass('actives');
-
         $(".item").each(function(index) {
             $(".item").hide();
             if (t == '') {
@@ -263,8 +258,8 @@ const dvinicinit = (function() {
         } else {
             Header.removeClass('fixi');
         }
-
     }
+
     //navbar mobile open
     ToggleMenu.click(function() {
         WarpMenuMobile.show(200);
@@ -272,6 +267,7 @@ const dvinicinit = (function() {
         OverlayClose.fadeIn();
         BodyElement.addClass('fixed')
     });
+
     //navbar mobile overlay close
     OverlayClose.click(function() {
         WarpMenuMobile.animate({ right: "-500px" }, 200);
@@ -288,7 +284,6 @@ const dvinicinit = (function() {
         }, 1000, "easeInOutExpo");
         e.preventDefault();
     });
-
 
     //link menu navigator scroll
     menuItemsmobile.on("click", function(e) {
@@ -311,7 +306,6 @@ const dvinicinit = (function() {
         magnific()
     }
 
-
     //on window scroll 
     const Scrollwindow = function(e) {
         // function windows on scroll event
@@ -323,12 +317,12 @@ const dvinicinit = (function() {
     const loadd = function() {
         preload.fadeOut(600);
     }
+
     //binds event ----------------------------
     const bindEvents = function() {
         Document.on('ready', DocumentReady);
         Window.on('scroll', Scrollwindow);
         Window.on('load', loadd)
-
     };
 
     // init - initilizes elements and events

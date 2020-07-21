@@ -83,7 +83,6 @@ textarea {
     width: 6rem;
 }
 
-
 .line-bg>div {
     position: absolute;
     top: 0;
@@ -111,10 +110,11 @@ textarea {
 .wraploadder {
     width: 100%;
     height: 100%;
-    position: fixed; 
+    position: fixed;
     background: white;
     z-index: 9999;
 }
+
 .loadder {
     display: inline-block;
     width: 80px;
@@ -123,7 +123,6 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .loadder div {
@@ -558,10 +557,7 @@ textarea {
 
 
 .about-meleftwrap a:hover::after {
-
     width: 0%;
-
-
 }
 
 .image-poto-r-one {
@@ -580,7 +576,6 @@ textarea {
 }
 
 .image-poto-r-two {
-
     width: 100%;
     height: 600px;
     position: absolute;
@@ -600,6 +595,7 @@ textarea {
 * 07. GAP SECTION
 * ----------------------------------------------------------------------------------------
 */
+
 #gap-section {
     margin-bottom: 100px;
 }
@@ -632,7 +628,6 @@ textarea {
     width: 100%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
 }
 
 .textgap-wrap h2 {
@@ -667,7 +662,6 @@ textarea {
     text-decoration: none;
     color: #272727;
 }
-
 
 
 
@@ -748,7 +742,13 @@ textarea {
     color: #fff;
 }
 
-.btn-pg:before {
+.btn-pg:focus {
+    text-decoration: none;
+    color: #fff;
+}
+ 
+
+.all:before {
     content: '';
     width: 70%;
     height: 2px;
@@ -759,27 +759,6 @@ textarea {
 }
 
 
-
-
-
-
-.btn-pg-news {
-    display: inline-block;
-    background: #272727;
-    padding: 20px 60px 20px 60px;
-
-    font-weight: 900;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    color: #fff;
-    letter-spacing: 1px;
-    margin-top: 50px;
-}
-
-.btn-pg-news:hover {
-    text-decoration: none;
-    color: #fff;
-}
 
 .filter-button {
     padding-left: 0;
@@ -990,6 +969,24 @@ textarea {
 
 
 
+
+.btn-pg-news {
+    display: inline-block;
+    background: #272727;
+    padding: 20px 60px 20px 60px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+.btn-pg-news:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
 .newstitle-wrap {
     width: 60%;
     padding-top: 0px;
@@ -1021,7 +1018,6 @@ textarea {
     text-align: center;
 }
 
-
 #news-wrap {
     background: #ededed;
     padding-top: 100px;
@@ -1050,7 +1046,6 @@ textarea {
 .icon p {
     margin-bottom: 20px;
     margin-top: 0;
-
 }
 
 .icon p:after {
@@ -1059,7 +1054,6 @@ textarea {
     height: 2px;
     background: red;
     left: 0;
-
     bottom: 0;
     position: absolute;
 }
@@ -1247,7 +1241,6 @@ svg {
 }
 
 #uparrow {
-
     font-size: 20px;
     cursor: pointer;
 }
@@ -1329,6 +1322,7 @@ svg {
     color: #fff;
 }
 
+
 /* ---------------------------------------------- /*
 * 12.MEDIA QUERY PAGE
 /* ---------------------------------------------- /*
@@ -1337,6 +1331,10 @@ svg {
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .image-poto-r-one {
+        top: 100px;
+    }
+
     .news-box {
         margin-top: 50px;
     }
@@ -1344,7 +1342,11 @@ svg {
 
 @media screen and (max-width: 1599px) {}
 
-@media screen and (max-width: 1240px) {}
+@media screen and (max-width: 1240px) {
+    .image-poto-r-one {
+        top: 100px;
+    }
+}
 
 @media (max-width: 999px) {
     .filter-button {
@@ -1386,10 +1388,6 @@ svg {
         display: none;
     }
 
-
-
-
-
     .image-poto-r-one {
         width: 300px;
         height: 450px;
@@ -1417,11 +1415,6 @@ svg {
         object-fit: cover;
     }
 
-
-
-
-
-
     .btfilter {
         padding-left: 10px;
     }
@@ -1429,7 +1422,6 @@ svg {
     .actives:after {
         margin-left: 5px;
     }
-
 
     .about-merightwrap {
         padding-top: 150px;
@@ -1449,8 +1441,6 @@ svg {
         display: inline-block;
         left: 0;
     }
-
-
 
     #porto-wrap {
         padding-top: 30px;
@@ -1473,7 +1463,6 @@ svg {
     .testi-wrap {
         padding-left: 20px;
         width: 90%;
-
     }
 
     .testi-wrap p {
@@ -1483,7 +1472,6 @@ svg {
     .testi-wrap h2 {
         font-size: 30px;
     }
-
 
     .text-testiwrap {
         width: 250px;
@@ -1505,7 +1493,6 @@ svg {
 
     .newstitle-wrap p {
         font-size: 15px;
-
     }
 
     .poto-userwarp {
@@ -1564,15 +1551,12 @@ svg {
     }
 
     .sosfoot li {
-
         margin-left: 20px;
         margin-right: 20px;
     }
 
     .btn-pg:before {
-
         width: 50%;
-
         left: 10px;
     }
 }
@@ -1580,15 +1564,12 @@ svg {
 
 @media (max-width: 768px) {
 
-
-
-
     .image-poto-r-one {
         width: 350px;
         height: 400px;
         position: absolute;
         left: 100px;
-        top: 250px;
+        top: 350px;
     }
 
     .image-poto-r-one>img {
@@ -1609,9 +1590,6 @@ svg {
         height: 500px;
         object-fit: cover;
     }
-
-
-
 
     .poto-wrap {
         column-count: 2;
@@ -1665,8 +1643,6 @@ svg {
         height: 1.2em;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
     }
-
-
 }
 
 @media only screen and (max-width: 690px) {}
@@ -1736,8 +1712,8 @@ svg {
 
     .poto-wrap {
         column-count: 1;
+        padding: 30px;
     }
-
 
     .image-poto-r-one {
         width: 250px;
@@ -1774,7 +1750,6 @@ svg {
     .contacttitle-wrap h2,
     .newstitle-wrap h2,
     .about-meleftwrap h2 {
-
         font-size: 30px;
     }
 
@@ -1783,4 +1758,14 @@ svg {
     }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+    .image-poto-r-one {
+        width: 200px;
+        left: 80px;
+    }
+
+    .image-poto-r-one>img {
+        width: 200px;
+    }
+}
