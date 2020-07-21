@@ -600,9 +600,7 @@ textarea {
 * ----------------------------------------------------------------------------------------
 */
 
-#gap-section {
-    margin-bottom: 100px;
-}
+
 
 .bg-gapwrap {
     width: 100%;
@@ -684,6 +682,7 @@ textarea {
 
 #portfolio {
     padding-bottom: 150px;
+    padding-top: 100px;
 }
 
 .title-wrap {
