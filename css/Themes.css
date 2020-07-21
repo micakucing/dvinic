@@ -652,15 +652,23 @@ textarea {
 }
 
 .textgap-wrap a {
-    padding: 20px;
-    background: #fff;
+    padding: 20px; 
     position: relative;
     left: 50px;
+    color: #272727;
     top: -5px;
+      background: #fff;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     letter-spacing: 1px;
+}
+ 
+
+.textgap-wrap a:focus {
+     color: #272727;
+    background: #fff; 
+    text-decoration: none;
 }
 
 .textgap-wrap a:hover {
