@@ -34,13 +34,13 @@ Version       : 1.0
     box-sizing: border-box;
 }
 
-::-moz-selection { 
- color: #000;
+::-moz-selection {
+    color: #000;
     background: #dbdbdb;
 }
 
 ::selection {
-  color: #000;
+    color: #000;
     background: #dbdbdb;
 }
 
@@ -659,22 +659,22 @@ textarea {
 }
 
 .textgap-wrap a {
-    padding: 20px; 
+    padding: 20px;
     position: relative;
     left: 50px;
     color: #272727;
     top: -5px;
-      background: #fff;
+    background: #fff;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     letter-spacing: 1px;
 }
- 
+
 
 .textgap-wrap a:focus {
-     color: #272727;
-    background: #fff; 
+    color: #272727;
+    background: #fff;
     text-decoration: none;
 }
 
@@ -694,6 +694,7 @@ textarea {
     padding-bottom: 150px;
     padding-top: 100px;
 }
+
 
 .title-wrap {
     width: 100%;
@@ -722,6 +723,30 @@ textarea {
     column-count: 3;
 }
 
+.texts {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    width: 250px;
+    color: #fff;
+    transition: all .3s;
+    opacity: 0;
+
+}
+
+.texts h6 {
+    letter-spacing: 3px;
+}
+
+.texts h4 {
+    line-height: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
 .gallery-link {
     transition: all .3s;
     width: 100%;
@@ -729,7 +754,12 @@ textarea {
     display: block;
 }
 
-.gallery-link:hover {
+.gallery-link:hover>.texts {
+    top: 50%;
+    opacity: 1;
+}
+
+.gallery-link:hover>img {
     filter: brightness(0.5);
 }
 
@@ -738,6 +768,7 @@ textarea {
     display: inline-block;
     vertical-align: top;
     width: 100%;
+    position: relative;
 }
 
 .poto-wrap .item img {
@@ -768,7 +799,7 @@ textarea {
     text-decoration: none;
     color: #fff;
 }
- 
+
 .all:before {
     content: '';
     width: 70%;
@@ -1037,7 +1068,7 @@ textarea {
 }
 
 #news-wrap {
-    background:#EEEFF1;
+    background: #EEEFF1;
     padding-top: 100px;
     padding-bottom: 100px;
     height: auto;
