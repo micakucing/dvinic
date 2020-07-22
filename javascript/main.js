@@ -311,7 +311,7 @@ const dvinicinit = (function() {
     const Scrollwindow = function(e) {
         // function windows on scroll event
         ScrollSpy()
-        //fixi()
+        fixi()
     }
 
    //loadder indicator init ----------------------
